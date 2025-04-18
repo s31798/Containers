@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 
 namespace Containers.Application;
 
-public class ContainerService
+public class ContainerService : IContainerService   
 {
     private string _connectionString;
     public ContainerService(string connectionString)
@@ -36,7 +36,6 @@ public class ContainerService
                         containers.Add(containerRow);
                     }
                 }
-
             }
             finally
             {
